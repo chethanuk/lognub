@@ -44,7 +44,7 @@ jobs:
 
       # Setup Python
       - name: Install Poetry
-        uses: snok/install-poetry@v1.1.6
+        uses: snok/install-poetry@v1.1.8
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
@@ -113,7 +113,7 @@ jobs:
       - name: Upload coverage to Codecov
         id: upload_cov
         if: steps.run_tests.outputs.result == 'success'
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v2.0.2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           # files: ./coverage*.xml
@@ -160,7 +160,7 @@ jobs:
 
       # Setup Python
       - name: Install Poetry
-        uses: snok/install-poetry@v1.1.6
+        uses: snok/install-poetry@v1.1.8
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true

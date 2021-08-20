@@ -4,7 +4,7 @@
 
 Dumb Loguru Wrap Package extracted from different internal package
 
-NOTE: It's just curated stuff in this repo for personal usage.
+NOTE: It's just curated stuff, Created for personal usage.
 
 ## TODO
 
