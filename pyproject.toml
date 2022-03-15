@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "lognub"
-version = "0.1.3"
+version = "0.1.4"
 description = "Dumb Log Utlity for personal use"
 authors = ["ChethanUK <chethanuk@outlook.com>"]
 maintainers = ["ChethanUK <chethanuk@outlook.com>"]
 license = "Apache-2.0"
-readme = "README.MD"
+readme = "README.md"
 homepage = "https://github.com/ChethanUK/"
 repository = "https://github.com/ChethanUK/lognub"
 documentation = "https://github.com/ChethanUK/lognub#readme"
@@ -23,16 +23,15 @@ classifiers = [
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "License :: OSI Approved :: Apache Software License"
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.7.1,<4.0"
+python = ">=3.6.2,<4.0"
 loguru = "^0.5.3"
-coverage = "^5.5"
-pytest-xdist = "^2.3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
@@ -51,7 +50,7 @@ pytest-deadfixtures = "^2.2.1"
 pytest-helpers-namespace = "^2021.3.24"
 pytest-icdiff = "^0.5"
 pytest-runner = "^5.3.0"
-pytest-xdist = "^2.2.1"
+pytest-xdist = "^2.3.0"
 pytest-rerunfailures = "^10.0"
 flake8-docstrings = "^1.6.0"
 pytest-flake8 = "^1.0.7"
@@ -60,6 +59,7 @@ pydantic = "^1.8.1"
 flaky = "^3.7.0"
 keyring = "^23.0.0"
 pytest-parallel = "^0.1.0"
+coverage = "^5.5"
 
 
 [build-system]
