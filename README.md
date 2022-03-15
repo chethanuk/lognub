@@ -2,9 +2,7 @@
 
 [![BuildAndTest](https://github.com/ChethanUK/lognub/actions/workflows/build_test.yml/badge.svg)](https://github.com/ChethanUK/lognub/actions/workflows/build_test.yml) [![PreCommitChecks](https://github.com/ChethanUK/lognub/actions/workflows/code_quality_lint_checkers.yml/badge.svg)](https://github.com/ChethanUK/lognub/actions/workflows/code_quality_lint_checkers.yml) [![CodeQL](https://github.com/ChethanUK/lognub/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/ChethanUK/lognub/actions/workflows/codeql-analysis.yml) [![codecov](https://codecov.io/gh/ChethanUK/lognub/branch/master/graph/badge.svg?token=HRI9hoE5ru)](https://codecov.io/gh/ChethanUK/lognub)
 
-Dumb Loguru Wrap Package extracted from different internal package
-
-NOTE: It's just curated stuff, Created for personal usage.
+Loguru utility package
 
 ## TODO
 
@@ -181,3 +179,6 @@ Ran 95 tests in 96.95s
 ```
 
 Thats it, ENV is setup
+
+NOTE: Loguru Wrap Package extracted from different internal package
+NOTE: It's just curated stuff, Created for personal usage.
