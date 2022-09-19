@@ -113,7 +113,7 @@ jobs:
       - name: Upload coverage to Codecov
         id: upload_cov
         if: steps.run_tests.outputs.result == 'success'
-        uses: codecov/codecov-action@v2.0.2
+        uses: codecov/codecov-action@v3.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           # files: ./coverage*.xml
