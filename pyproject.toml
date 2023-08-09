@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lognub"
-version = "0.1.5"
+version = "0.2.0"
 description = "Dumb Log Utlity for personal use"
 authors = ["ChethanUK <chethanuk@outlook.com>"]
 maintainers = ["ChethanUK <chethanuk@outlook.com>"]
@@ -13,8 +13,7 @@ keywords = [
     "Loguru",
     "data-ops",
     "data-engineering",
-    "best-practices",
-    "big-data"
+    "best-practices"
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -30,8 +29,8 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.6.2,<4.0"
-loguru = "^0.5.3"
+python = ">=3.7.2,<4.0"
+loguru = "^0.7.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
