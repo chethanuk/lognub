@@ -19,7 +19,6 @@ def test_InterceptHandler_intercepts_python_logging_for_loguru(loguru_logger: Lo
     assert InterceptHandler.add_handle(loguru_logger)
 
     try:
-
         with patch.object(loguru_logger, "info") as mocked_info:
             logging.info("test")
             assert mocked_info.called_once_with("test")

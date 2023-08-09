@@ -43,7 +43,7 @@ class InterceptHandler(BaseLogHandler):
     class LoggingHandler(logging.Handler):
         """Log handler that intercepts Python's builtin logging for Loguru logs."""
 
-        @lru_cache()
+        @lru_cache(maxsize=64, typed=True)  # noqa: B019
         def _get_level_name(self, record: logging.LogRecord, default_level: str = "INFO") -> str:
             """Determine the loguru record name for the given Python logging record.
             :param logging.LogRecord record: The record to determine the level name from

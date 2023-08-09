@@ -112,7 +112,7 @@ def configure_logger(
         InterceptHandler.remove_handle(loguru.logger)  # type: ignore
 
 
-@lru_cache(maxsize=2)
+@lru_cache(maxsize=64, typed=True)
 def get_logger(log_level: str = "warn") -> Logger:
     """Get a logger instance that can be used right out of the box.
     >>> log = get_logger()

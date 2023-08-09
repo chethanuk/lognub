@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lognub"
-version = "0.1.4"
+version = "0.1.5"
 description = "Dumb Log Utlity for personal use"
 authors = ["ChethanUK <chethanuk@outlook.com>"]
 maintainers = ["ChethanUK <chethanuk@outlook.com>"]
