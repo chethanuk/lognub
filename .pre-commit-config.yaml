@@ -21,20 +21,20 @@ ci:
   submodules: false  
 default_stages:
   - prepare-commit-msg
-  - commit
-  - push
+  - pre-commit
+  - pre-push
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: check-case-conflict
       - id: check-merge-conflict
         stages:
-          - commit
+          - pre-commit
       - id: check-added-large-files
         args: [--maxkb=1000]
         stages:
-          - commit
+          - pre-commit
       - id: detect-aws-credentials
         args:
           - --allow-missing-credentials
@@ -51,7 +51,7 @@ repos:
         # types: [text]
 
   - repo: https://github.com/psf/black
-    rev: 23.7.0
+    rev: 24.10.0
     hooks:
       - id: black
         args: [ --safe, --quiet ]
@@ -60,8 +60,8 @@ repos:
         # override until resolved: https://github.com/psf/black/issues/402
         types: [ ]
 
-  - repo: https://github.com/myint/autoflake
-    rev: v2.2.0
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.3.1
     hooks:
       - id: autoflake
         exclude: &fixtures tests/functional/|tests/input|tests/extensions/data|tests/regrtest_data/|tests/data/
@@ -72,8 +72,8 @@ repos:
           - --remove-duplicate-keys
           - --remove-unused-variables
 
-  - repo: https://github.com/timothycrosley/isort
-    rev: 5.12.0
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
     hooks:
       - id: isort
         language_version: python3
@@ -82,7 +82,7 @@ repos:
         exclude: scala
 
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: 2.2.0
+    rev: 3.2.4
     hooks:
       - id: sqlfluff-fix
         name: sqlfluff-fix
@@ -96,7 +96,7 @@ repos:
         additional_dependencies: [ ]
 
   - repo: https://github.com/sqlfluff/sqlfluff
-    rev: 2.2.0
+    rev: 3.2.4
     hooks:
       - id: sqlfluff-lint
         name: sqlfluff-lint
@@ -115,7 +115,7 @@ repos:
 #      args: ['--py37-plus','--exit-zero-even-if-changed']
 
   - repo: https://github.com/pycqa/flake8
-    rev: 6.1.0
+    rev: 7.1.1
     hooks:
       - id: flake8
         args: [ '--config=.flake8' ]
@@ -177,7 +177,7 @@ repos:
 #          - flake8-docstrings
 
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.5
+    rev: 1.7.10
     hooks:
       - id: bandit
         args: [ "-ll", "-r", "airflow1x" ]
